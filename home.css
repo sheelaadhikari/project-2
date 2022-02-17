@@ -23,7 +23,7 @@ body {
     width: 100vw;
     height: 500px;
     object-fit: cover;
-    opacity: 0.6;
+    /* opacity: 0.6; */
     /* filter: opacity(0.5); */
 }
 
@@ -111,6 +111,17 @@ body {
 }
 
 .Latest-bar {
+    align-self: center;
+    color: orangered;
+    font-family: "Ranchers" !important;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 30px;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.sound-bar {
     align-self: center;
     color: orangered;
     font-family: "Ranchers" !important;
