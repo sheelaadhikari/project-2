@@ -59,7 +59,10 @@ body {
     color: orangered;
     font-family: "Ranchers" !important;
     font-weight: bold;
-    letter-spacing: 3px;
+}
+
+.title-bar>h1 {
+    letter-spacing: 0px;
 }
 
 .nav-right {
