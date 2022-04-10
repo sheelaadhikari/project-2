@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+body {
+    font-family: Comfortaa, 'Times New Roman', Times, serif;
+    background-color: #eeeeee;
+    margin: 0;
+    color: #444444;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.nav-left {
+    display: flex;
+    flex-direction: row;
+    /* background-color: white; */
+}
+
+.nav-left>div>img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.title-bar {
+    align-self: center;
+    color: orangered;
+    font-family: "Ranchers" !important;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.nav-right {
+    display: flex;
+    align-self: center;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+.nav-item {
+    padding: 12px 20px;
+    font-size: 1.1em;
+}
+
+.nav-item>a {
+    color: #444444;
+    text-decoration: none;
+}
+
+.nav-item>a:hover {
+    /* text-decoration: underline; */
+    color: orangered;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* for margins */
+
+.mg-t-5 {
+    margin-top: 5px;
+}
+
+.mg-t-10 {
+    margin-top: 10px;
+}
+
+.mg-b-5 {
+    margin-bottom: 5px;
+}
+
+
+/* when using flex */
+
+.d-flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
