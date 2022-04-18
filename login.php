@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="product-details.css">
+    <title>DoshroDeal | Buy and Sell Online</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./login.css">
+    <!-- <link rel="stylesheet" href="./login.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
+
+    
+
 </head>
 <body>
-         
+    
     <!-- Navigation Bar -->
     <header>
 
@@ -24,7 +28,7 @@
                 <li><a href="">Contact Us
 
                 </a></li>
-                <li><a href="login.php">Login</a></li>
+                <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
         <div class="nav-sell">
@@ -36,57 +40,48 @@
   
     </header>
 
-    <!-- Product Details -->
-    <section class="product">
-        
-        <div class="row-1">
-        <div class="col-1">
-            <img src="images/bed.jpg" alt="">
-            <div class="details">
-                <h2>Bedroom Wardrobe</h2>
-                <br>
-                <h3>Price: Rs<span id="price"> 30000</span></h3><br><br><hr>
-                <h4>Details:</h4>
-                <p> <span id="description"> A cupboard and double size bed with small accessories or fittings </span></p>
-               
-               <p> <i class="fa fa-clock-o" aria-hidden="true"></i>Condition: <span id="condition">Nearly Used</span></p>
-               <p><i class="fa fa-caret-square-o-right" aria-hidden="true"></i>Category: <span id="#category">Furnitures</span></p>
-              
+<!-- Register and Account page -->
+ <!-- account page -->
+ <div class="account-page">
+    <div class="container">
+        <div class="row">
+           
+           
+                <div class="form-container account" >
+                    <div class="form-btn">
+                       
+                        <span onclick="register()"> Register</span>
+                         <span onclick="login()">Login </span>
+                        <hr id="indicator">
+                    </div>
+                   <!-- register form -->
+                    <form id="login-form" action="register.php" method="POST" >
+                        <input type="text"placeholder="Username"  name="name">
+                        <input type="email"placeholder="Email" name="email" >
+                        <input type="password" placeholder="password" name="password">
+                        <input type="password" placeholder="Confirm password" >
+                        <input type="text" placeholder="Phone Number" name="phone">
+
+                        <button type="submit" class="btn">Register</button>
+                        
+                    </form>
 
 
-             
+                    <!-- login form -->
+                    <form id="reg-form" action="login1.php" method="POST">
+                        <input type="text" placeholder="Username" name="name">
+                        <input type="password" placeholder="password" name="password">
+                        <button type="submit" class="btn">Login</button>
+                        <a href="">
+                           Forget Password 
+                        </a>
+                    </form> 
+                </div>
             </div>
-
-
-        </div>
-        <div class="col-2">
-            <div class="seller-info">
-                <h2>Seller's info</h2>
-                <hr>
-                <img src="images/6481225432795d8cdf48f0f85800cf66.jpg" alt="">
-                <h4>User 1</h4>
-               <p> <i class="fa fa-user" aria-hidden="true"> Private Person</i></p>
-                <br>
-                <button>Contact Now</button>
-                <button>View Information</button>
-
-            </div>
-            <div class="seller-location">
-                <h2>Listing Location</h2>
-                <hr>
-                <p><i class="fa fa-map-marker" aria-hidden="true"></i><span id="location">Kathmandu</span></p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56516.31625952065!2d85.29111317154917!3d27.708955944391366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu%2044600!5e0!3m2!1sen!2snp!4v1643818110007!5m2!1sen!2snp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-               
-            </div>
-
         </div>
     </div>
-
-    </section>
-
-
-
-
+    <script src="login.js"></script>
+  
 
 <!-- footer -->
 <section class="footer">
@@ -128,5 +123,8 @@
     </div>
 </div>
 </section>
+
+
+
 </body>
 </html>
