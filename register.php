@@ -1,30 +1,58 @@
 <?php
-$servername = "localhost";
-$username = "user";
-$password = "tpa!_/_oxY)hwZBa";
-$dbname = "project";
+session_start();
+require 'links/connection.php';
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+if(isset($_POST['submit'])){
+
+
+$name = mysqli_real_escape_string($conn,$_POST['name']);
+$email =mysqli_real_escape_string($conn, $_POST['email']);
+$phone =mysqli_real_escape_string($conn, $_POST['phone']);
+$password =  mysqli_real_escape_string($conn, $_POST['password']);
+$cpassword =  mysqli_real_escape_string($conn, $_POST['cpassword']);
+
+//encrypt password
+$pass = password_hash($password,PASSWORD_BCRYPT);
+$cpass = password_hash($cpassword,PASSWORD_BCRYPT);
+
+
+//checking existing email 
+
+$emailquery = "SELECT * FROM user WHERE email='$email'";
+$query = mysqli_query($conn,$emailquery);
+
+$emailcount = mysqli_num_rows($query);
+
+if($emailcount>0){
+  echo "email already exists";
+  header('location:account.php');
+}
+else{
+  if($password === $cpassword){
+
+    $insertquery = "INSERT INTO user(username,email,phone,password,c_password) values('$name','$email','$phone','$pass','$cpass')";
+    $iquery = mysqli_query($conn,$insertquery);
+    header('location:index.php');
+  }
+  else{
+    echo "password are not matching";
+    header('location:account.php');
+  }
+
 }
 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$pwd = $_POST['password'];
-$phone = $_POST['phone'];
+
+//  $sql = "INSERT INTO `user` (`user_id`, `username`, `password`, `email`, `phone`) VALUES (NULL, '$name','$pass', '$email','$phone');";
 
 
 
- $sql = "INSERT INTO `user` (`user_id`, `username`, `password`, `email`, `phone`) VALUES (NULL, '$name','$pwd', '$email','$phone');";
 
-if ($conn->query($sql) === TRUE) {
-   echo "New record created successfully";
- } else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
+// if ($conn->query($sql) === TRUE) {
+//    echo "New record created successfully";
+//  } else {
+//   echo "Error: " . $sql . "<br>" . $conn->error;
+// }
+
 }
-
-$conn->close();
+// $conn->close();
 ?>

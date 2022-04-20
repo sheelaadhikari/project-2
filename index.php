@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,56 +21,8 @@
 <body>
     
     <!-- Navigation Bar -->
-    <header>
-
-        <a href="index.html" class="logo"><img src="images/Screenshot from 2022-04-08 23-38-46.png" alt="logo " class="logo"></a>
-       
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="">Contact Us
-
-                </a></li>
-                <li><a href="login.php">Login</a></li>
-            </ul>
-        </nav>
-        <div class="nav-sell">
-        <a href="#" class="cta"> <button><i class="fa fa-plus-circle" aria-hidden="true"></i>Add Listing</button></a>
-    </div>
-    <div class="nav-profile" id="user-menu">
-       <img src="images/6481225432795d8cdf48f0f85800cf66.jpg" alt="">
-    </div>
+   <?php require 'links/navigation.php'; ?>
   
-    </header>
-
-<!-- user profile side-bar start-->
-<div class="side-bar">
-    <div id="close-side-bar"> 
-        <i class="fa fa-times"  ></i>
-    </div>
-    <div class="user">
-        <img src="images/6481225432795d8cdf48f0f85800cf66.jpg" alt="">
-        <h3>User 1</h3>
-        <div class="user-navbar">
-            <a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>Dash board</a>
-            <a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>My Listing</a>
-            <a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>Edit Profile</a>
-            <a href=""><i class="fa fa-angle-right" aria-hidden="true"></i>Log Out&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-           
-
-
-
-
-        </div>
-
-    </div>
-</div>
-
-
-
-<!-- user profile side-bar end-->
-
    <!-- search bar -->
     <section class="search">
         <div class="search-bar">
@@ -518,50 +475,10 @@
             </div>            
         </div>     
     </section>
-
-
-
-
 <!-- footer -->
-<section class="footer">
-<div style="background-color: black;">
-    <div class="footer-bar">
-        Join Our Pay Less Get More Culture
-    </div>
-    <p style="text-align: center; font-size: large; font: bolder; color: white; ">“Choose best Make it Last”</p>
-    <a href="mailto: abc@example.com" class="d-flex justify-center" style="color: white;">thehaatbazar@gmail.com </a>
+    <?php require 'links/footer.php'; ?>
 
 
-    <div class="footer-item">
-        <div class="d-flex justify-center  align-center ">
-
-            <a href="facebook.com" style="color: white; padding-right: 10px; ">Facebook</a>
-
-            <a href="facebook.com" style="color: white; padding-right: 10px; ">Instragram</a>
-            <a href="facebook.com" style="color: white; padding-right: 10px; ">Linkkedin</a>
-            <a href="facebook.com" style="color: white; padding-right: 10px; ">Twitter</a>
-        </div>
-
-        <div class="d-flex justify-center  mg-t-10">
-
-
-            <a href="contact.com" style="padding-right: 15px; color: white;" class="font-black">Contact </a>
-
-
-
-            <a href="blog.com" style="padding-right: 15px; color: white;" class="font-black">Blog</a>
-
-            <a href="medication.com" style="padding-right: 15px; color: white;" class="font-black">Terms and Condition</a>
-
-            <a href="delivery.com" style="padding-right: 15px; color: white;" class="font-black">Delivery</a>
-            <a href="delivery.com" style="padding-right: 15px; color: white;" class="font-black">Privacy Policy</a>
-            <a href="delivery.com" style="padding-right: 15px; color: white;" class="font-black">Help & Support</a>
-        </div>
-
-
-    </div>
-</div>
-</section>
 <script src="usermenu.js"></script>
 </body>
 </html>
